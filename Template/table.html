@@ -6,13 +6,20 @@
     <title>Home</title>
 </head>
 <body>
-    <table>
+    <!-- <table>
         <thead><tr><th>Name</th><th>Description</th></tr></thead>
         <tbody>
         <tr><td>Name1</td><td>Description1</td></tr>
         <tr><td>Name2</td><td>Description2</td></tr>
         <tr><td>Name3</td><td>Description3</td></tr>
         </tbody>
-    </table>
+    </table> -->
+    <div class=page>
+        <h1>Surfer groups</h1>
+        {% for table in tables %}
+          <h2>{{titles[loop.index]}}</h2>
+          {{ table|safe }}
+        {% endfor %}
+      </div>
 </body>
 </html>
