@@ -7,7 +7,7 @@ app = Flask(__name__,template_folder='Template')
 @app.route('/')
 def show_tables():
     data = pd.read_csv('a.csv')
-    return render_template("table.html")
+    return render_template("table.html", tables=[data.to_html(classes='data')], titles=data.columns.values)
 
 @app.route('/about')
 def about():
